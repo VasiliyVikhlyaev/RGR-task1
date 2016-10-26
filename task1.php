@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="case.css" rel="stylesheet">
+		<link href="task1.css" rel="stylesheet">
 		<title>Метро</title>
 	</head>
 	<body>
@@ -47,32 +47,32 @@
 ?>
 <?php
 
-foreach ($metro as $key_line=>$line){
-	if ($key_line=="Ленинская"){
+foreach ($metro as $key_line=>$line) {
+	if ($key_line=="Ленинская") {
 		echo "<div class='header'> ".$key_line. " линия</div>";
 	}
 	else {
 		echo "<div class='header2'> ".$key_line. " линия</div>";
 	}
-	foreach($line as $station){
-		if ($key_line =="Ленинская"){
-			if (isset($station['name'])){
+	foreach($line as $station) {
+		if ($key_line =="Ленинская") {
+			if (isset($station['name'])) {
 				echo "<div class = 'name'> ".htmlspecialchars($station['name'])."</div>";
 			}
-		if (isset($station['photos'])){
-			foreach ($station['photos'] as $photo){
+		if (isset($station['photos'])) {
+			foreach ($station['photos'] as $photo) {
 				echo "<div class = 'photo'>	<img src = '".$photo."'/></div>";
 			}
 		}
-		if (isset($station['description'])){
+		if (isset($station['description'])) {
 			echo "<div class = 'description'>".htmlspecialchars($station['description'])."</div><hr>";
 		}
 		}
 		else {
-			if (isset($station['name'])){
+			if (isset($station['name'])) {
 				echo "<div class = 'name'>".htmlspecialchars($station['name'])."</div>";
 			}
-			if (isset($station['description'])){
+			if (isset($station['description'])) {
 				echo "<div class = 'description'>".htmlspecialchars($station['description'])."</div>";
 			}
 		}
