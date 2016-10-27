@@ -59,14 +59,14 @@ foreach ($metro as $key_line=>$line) {
 			if (isset($station['name'])) {
 				echo "<div class = 'name'> ".htmlspecialchars($station['name'])."</div>";
 			}
-		if (isset($station['photos'])) {
-			foreach ($station['photos'] as $photo) {
-				echo "<div class = 'photo'>	<img src = '".$photo."'/></div>";
+			if (isset($station['photos'])) {
+				foreach ($station['photos'] as $photo) {
+					echo "<div class = 'photo'>	<img src = '".$photo."'/></div>";
+				}
 			}
-		}
-		if (isset($station['description'])) {
-			echo "<div class = 'description'>".htmlspecialchars($station['description'])."</div><hr>";
-		}
+			if (isset($station['description'])) {
+				echo "<div class = 'description'>".htmlspecialchars($station['description'])."</div><hr>";
+			}
 		}
 		else {
 			if (isset($station['name'])) {
